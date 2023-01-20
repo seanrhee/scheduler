@@ -4,7 +4,7 @@ import Button from "components/Button"
 
 export default function Confirm(props) {
   return (
-    <main className="appointment__card appointment__card--confirm">
+    <main className="appointment__card appointment__card--confirm" data-testid="appointment">
       <h1 className="text--semi-bold">Delete the appointment?</h1>
       <section className="appointment__actions">
         <Button onClick={props.onCancel} danger>Cancel</Button>

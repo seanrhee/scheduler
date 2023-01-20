@@ -10,8 +10,6 @@ function InterviewerListItem(props) {
     }
   )
 
-  console.log(props)
-
   return (
     <li className={interviewerClass} onClick={props.setInterviewer}>
       <img

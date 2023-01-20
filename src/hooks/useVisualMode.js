@@ -7,8 +7,6 @@ export default function useVisualMode(initial) {
     function transition(currentMode, newMode = false) {
       if (newMode) {
         setHistory(prev => {
-          console.log("current state", prev)
-          console.log("new state", [...prev.slice(0, prev.length-1), currentMode])
           return [...prev.slice(0, prev.length-1), currentMode]
         })
       }
@@ -20,11 +18,7 @@ export default function useVisualMode(initial) {
 
     //back function
     function back() {
-      // console.log(history)
-      setHistory(prev => {
-        console.log("current state", prev)
-        console.log("new state", [...prev.slice(0, prev.length-1)])
-  
+      setHistory(prev => {  
         if (prev.length <= 1) {
           return prev;
         }

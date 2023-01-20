@@ -52,12 +52,12 @@ export default function Appointment(props) {
   }
 
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
-      {mode === SAVING && <Status />}
-      {mode === CANCEL && <Status /> }
-      {mode === CONFIRM && <Confirm onCancel={() => back()} onConfirm={cancel} />}
+      {mode === SAVING && <Status message="Saving"/>}
+      {mode === CANCEL && <Status message="Deleting"/> }
+      {mode === CONFIRM && <Confirm onCancel={() => back()} onConfirm={cancel} message="are you sure you would like to delete?"/>}
       {mode === EDIT && (
         <Form
           student={props.student ? props.student : props.interview.student}
