@@ -2,21 +2,21 @@ import React from "react";
 import classNames from "classnames";
 import 'components/DayListItem.scss'
 
-const formatSpots = (spots) => {
-  if (spots > 1) {
-    return `${spots} spots remaining`
-  }
-
-  if (spots === 1) {
-    return '1 spot remaining'
-  }
-
-  if (spots === 0) {
-    return 'no spots remaining'
-  }
-}
-
 export default function DayListItem(props) {
+
+  const formatSpots = (spots) => {
+    if (spots !== 0 && spots !== 1) {
+      return `${spots} spots remaining`
+    }
+  
+    if (spots === 1) {
+      return '1 spot remaining'
+    }
+  
+    if (spots === 0) {
+      return 'no spots remaining'
+    }
+  }
 
   const dayClass = classNames(
     'day-list__item',
