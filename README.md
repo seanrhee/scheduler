@@ -24,6 +24,13 @@ npm test
 npm run storybook
 ```
 
+## Installing API server
+The application requires an API server to be installed and run parellel to the application.
+- Fork and clone https://github.com/lighthouse-labs/scheduler-api
+- Follow the instructions in the README
+- Install all dependencies with `npm install`
+- Run the API server with `npm start`
+
 ## Project Dependencies
     Axios
     Classnames
